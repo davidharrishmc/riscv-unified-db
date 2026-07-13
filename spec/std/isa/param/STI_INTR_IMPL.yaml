@@ -23,4 +23,6 @@ schema:
   type: boolean
 definedBy:
   extension:
-    name: Zicsr,Sstc
+    allOf:
+      - name: Zicsr
+      - name: Sstc
