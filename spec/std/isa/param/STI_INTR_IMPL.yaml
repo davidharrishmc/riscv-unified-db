@@ -23,8 +23,8 @@ schema:
   type: boolean
 requirements:
   idl(): |
-    SSTC_SUPPORTED -> STI_INTR_IMPL;
-  reason: "When the Sstc extension is implemented, STIP reflects the tiimer interrupt signal resulting from `stimecmp`."
+    implemented?(ExtensionName::Sstc) -> STI_INTR_IMPL;
+  reason: "When the Sstc extension is implemented, STIP reflects the timer interrupt signal resulting from `stimecmp`."
 definedBy:
   extension:
     allOf:
