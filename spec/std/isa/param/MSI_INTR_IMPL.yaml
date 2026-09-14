@@ -12,12 +12,13 @@ description: |
   Possible values:
 
   true::
-    Machine-level software interrupts are implemented. `mie.MSIE` is writable.
+    Machine-level software interrupts are implemented.
+    `mie.MSIE` and `mideleg.MSI` are writable.
 
   false::
     Machine-level software interrupts are not implemented.
-    `mie.MSIE` and `mideleg[3]` are read-only zero.
-long_name: TODO
+    `mie.MSIE` and `mideleg.MSI` are read-only zero.
+long_name: Machine-level software interrupts are implemented
 schema:
   type: boolean
 definedBy:

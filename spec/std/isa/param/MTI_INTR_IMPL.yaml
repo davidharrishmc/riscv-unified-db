@@ -12,13 +12,13 @@ description: |
   Possible values:
 
   true::
-    Machine-level timer interrupts are implemented. `mie.MTIE` is writable.
-    `mtimecmp` must be writable.
+    Machine-level timer interrupts are implemented.
+    `mie.MTIE`, `mideleg.MTI`, and `mtimecmp` are writable.
 
   false::
     Machine-level timer interrupts are not implemented.
-    `mie.MTIE` and `mideleg[7]` are read-only zero. `mtimecmp` is optional and may be read-only zero.
-long_name: TODO
+    `mie.MTIE` and `mideleg.MTI` are read-only zero. `mtimecmp` is optional and may be read-only zero.
+long_name: Machine-level timer interrupts are implemented
 schema:
   type: boolean
 definedBy:

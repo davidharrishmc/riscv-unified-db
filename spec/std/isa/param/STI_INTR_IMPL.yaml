@@ -13,12 +13,13 @@ description: |
   Possible values:
 
   true::
-    Supervisor-level timer interrupts are implemented. `mie.STIE` is writable.
+    Supervisor-level timer interrupts are implemented.
+    `mie.STIE` and `mideleg.STI` are writable.
 
   false::
     Supervisor-level timer interrupts are not implemented.
-    `mie.STIE` and `mideleg[5]` are read-only zero.
-long_name: TODO
+    `mie.STIE` and `mideleg.STI` are read-only zero.
+long_name: Supervisor-level timer interrupts are implemented
 schema:
   type: boolean
 requirements:

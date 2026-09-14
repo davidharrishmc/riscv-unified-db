@@ -101,7 +101,8 @@ fields:
       *Supervisor Software Interrupt delegation*
 
       When 1, Supervisor Software interrupts are delegated to HS/S-mode.
-    type: RW
+    type(): |
+      return SSI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 0
   VSSI:
     location: 2
@@ -111,7 +112,8 @@ fields:
       When 1, Virtual Supervisor Software interrupts are delegated to HS-mode.
 
       Virtual Supervisor Software Interrupts are always delegated to HS-mode, so this field is read-only one.
-    type: RO
+    type(): |
+      return VSSI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 1
     definedBy:
       extension:
@@ -123,7 +125,8 @@ fields:
 
       When 1, Machine Software interrupts are delegated to HS/S-mode.
       This is unusual but permitted. See https://github.com/riscv/riscv-isa-manual/issues/3162.
-    type: RW
+    type(): |
+      return MSI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 0
   STI:
     location: 5
@@ -131,7 +134,8 @@ fields:
       *Supervisor Timer interrupt delegation*
 
       When 1, Supervisor Timer interrupts are delegated to HS/S-mode.
-    type: RW
+    type(): |
+      return STI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 0
   VSTI:
     location: 6
@@ -141,7 +145,8 @@ fields:
       When 1, Virtual Supervisor Timer interrupts are delegated to HS-mode.
 
       Virtual Supervisor Time Interrupts are always delegated to HS-mode, so this field is read-only one.
-    type: RO
+    type(): |
+      return VSTI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 1
     definedBy:
       extension:
@@ -153,7 +158,8 @@ fields:
 
       When 1, Machine Timer interrupts are delegated to HS/S-mode.
       This is unusual but permitted. See https://github.com/riscv/riscv-isa-manual/issues/3162.
-    type: RW
+    type(): |
+      return MTI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 0
   SEI:
     location: 9
@@ -161,7 +167,8 @@ fields:
       *Supervisor External interrupt delegation*
 
       When 1, Supervisor External interrupts are delegated to HS/S-mode.
-    type: RW
+    type(): |
+      return SEI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 0
   VSEI:
     location: 10
@@ -169,7 +176,8 @@ fields:
       *Virtual Supervisor External interrupt delegation*
 
       Virtual Supervisor External Interrupts are always delegated to HS-mode, so this field is read-only one.
-    type: RO
+    type(): |
+      return VSEI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 1
     definedBy:
       extension:
@@ -181,7 +189,8 @@ fields:
 
       When 1, Machine External interrupts are delegated to HS/S-mode.
       This is unusual but permitted. See https://github.com/riscv/riscv-isa-manual/issues/3162.
-    type: RW
+    type(): |
+      return MEI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
     reset_value: 0
   SGEI:
     location: 12

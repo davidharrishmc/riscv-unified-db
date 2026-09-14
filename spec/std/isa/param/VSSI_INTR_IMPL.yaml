@@ -5,20 +5,20 @@
 
 $schema: param_schema.json#
 kind: parameter
-name: SSI_INTR_IMPL
+name: VSSI_INTR_IMPL
 description: |
-  Whether or not supervisor-level software interrupts are implemented.
+  Whether or not virtual supervisor-level software interrupts are implemented.
 
   Possible values:
 
   true::
-    Supervisor-level software interrupts are implemented.
-    `mie.SSIE` and `mideleg.SSI` are writable.
+    Virtual supervisor-level software interrupts are implemented.
+    `mie.VSSIE` and `mideleg.VSSI` are writable.
 
   false::
     Supervisor-level software interrupts are not implemented.
-    `mie.SSIE` and `mideleg.SSI` are read-only zero.
-long_name: Supervisor-level software interrupts are implemented
+    `mie.VSSIE` and `mideleg.VSSI` are read-only zero.
+long_name: Virtual supervisor-level software interrupts are implemented
 schema:
   type: boolean
 definedBy:

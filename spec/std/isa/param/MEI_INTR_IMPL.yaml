@@ -12,12 +12,13 @@ description: |
   Possible values:
 
   true::
-    Machine-level external interrupts are implemented. `mie.MEIE` is writable.
+    Machine-level external interrupts are implemented.
+    `mie.MEIE` and `mideleg.MEI` are writable.
 
   false::
     Machine-level external interrupts are not implemented.
-    `mie.MEIE` and `mideleg[11]` are read-only zero.
-long_name: TODO
+    `mie.MEIE` and `mideleg.MEI` are read-only zero.
+long_name: Machine-level external interrupts are implemented
 schema:
   type: boolean
 definedBy:

@@ -12,12 +12,13 @@ description: |
   Possible values:
 
   true::
-    Supervisor-level external interrupts are implemented. `mie.SEIE` is writable.
+    Supervisor-level external interrupts are implemented.
+    `mie.SEIE` and `mideleg.SEI` are writable.
 
   false::
     Supervisor-level external interrupts are not implemented.
-    `mie.SEIE` and `mideleg[9]` are read-only zero.
-long_name: TODO
+    `mie.SEIE` and `mideleg.SEI` are read-only zero.
+long_name: Supervisor-level external interrupts are implemented
 schema:
   type: boolean
 definedBy:
