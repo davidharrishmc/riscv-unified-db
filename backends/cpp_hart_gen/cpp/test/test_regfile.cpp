@@ -29,7 +29,7 @@ implemented_extensions:
   - [S, "1.11.0"]
   - [U, "1.0.0"]
   - [Zifencei, "2.0.0"]
-  - [Sv39, "1.11.0"]
+  - [Sv39, "1.0.0"]
   - [Zca, "1.0.0"]
   - [F, "2.2.0"]
 
@@ -122,6 +122,9 @@ params:
   SEI_INTR_IMPL: false
   SSI_INTR_IMPL: false
   STI_INTR_IMPL: false
+  VSEI_INTR_IMPL: false
+  VSSI_INTR_IMPL: false
+  VSTI_INTR_IMPL: false
 )";
 
 // ---------------------------------------------------------------------------
