@@ -144,8 +144,7 @@ fields:
       When 1, Virtual Supervisor Timer interrupts are delegated to HS-mode.
 
       Virtual Supervisor Time Interrupts are always delegated to HS-mode, so this field is read-only one.
-    type(): |
-      return VSTI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
+    type: RO
     reset_value: 1
     definedBy:
       extension:
@@ -175,8 +174,7 @@ fields:
       *Virtual Supervisor External interrupt delegation*
 
       Virtual Supervisor External Interrupts are always delegated to HS-mode, so this field is read-only one.
-    type(): |
-      return VSEI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
+    type: RO
     reset_value: 1
     definedBy:
       extension:

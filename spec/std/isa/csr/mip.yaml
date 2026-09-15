@@ -235,7 +235,8 @@ fields:
       With AIA/IMSIC, IPIs are delivered as external interrupts. As a result, this bit is
       unused and hardwired to 0.
       <%- end -%>
-    type: MSI_INTR_IMPL ? CsrFieldType::ROH : CsrFieldType::RO;
+    type(): |
+      return MSI_INTR_IMPL ? CsrFieldType::ROH : CsrFieldType::RO;
     reset_value: 0
   STIP:
     location: 5
