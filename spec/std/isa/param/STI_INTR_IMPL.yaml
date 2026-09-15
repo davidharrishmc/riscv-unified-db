@@ -18,7 +18,7 @@ description: |
 
   false::
     Supervisor-level timer interrupts are not implemented.
-    `mie.STIE` and `mideleg.STI` are read-only zero.
+    `mie.STIE`, `mip.STIP`, and `mideleg.STI` are read-only zero.
 long_name: Supervisor-level timer interrupts are implemented
 schema:
   type: boolean

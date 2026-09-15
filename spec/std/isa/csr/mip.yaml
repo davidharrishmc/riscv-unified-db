@@ -227,13 +227,15 @@ fields:
     description: |
       *Machine Software Interrupt Pending*
 
-      Unused field.
+      Interrupt-pending bit for machine-level software interrupts.
+      MSIP is read-only in mip, and is written by accesses to memory-mapped control registers,
+      which are used to provide machine-level interprocessor interrupts.
 
       <%- if ext?(:Smaia) -%>
       With AIA/IMSIC, IPIs are delivered as external interrupts. As a result, this bit is
       unused and hardwired to 0.
       <%- end -%>
-    type: RO
+    type: RO-H
     reset_value: 0
   STIP:
     location: 5
@@ -370,7 +372,7 @@ fields:
       * `hip.VSEIP`
       * `vsip.SEIP` when `hideleg.VSEI` is set
     type(): |
-      return SEI_INTR_IMPL ? CsrFieldType::ROH : CsrFieldType::RO;
+      return VSEI_INTR_IMPL ? CsrFieldType::ROH : CsrFieldType::RO;
     reset_value: 0
     definedBy:
       extension:

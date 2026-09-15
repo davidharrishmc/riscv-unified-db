@@ -17,7 +17,7 @@ description: |
 
   false::
     Supervisor-level external interrupts are not implemented.
-    `mie.SEIE` and `mideleg.SEI` are read-only zero.
+    `mie.SEIE`, `mip.SEIP`, and `mideleg.SEI` are read-only zero.
 long_name: Supervisor-level external interrupts are implemented
 schema:
   type: boolean

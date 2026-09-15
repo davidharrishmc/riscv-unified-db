@@ -247,6 +247,3 @@ params:
   SEI_INTR_IMPL: false
   SSI_INTR_IMPL: false
   STI_INTR_IMPL: false
-  VSEI_INTR_IMPL: false
-  VSSI_INTR_IMPL: false
-  VSTI_INTR_IMPL: false

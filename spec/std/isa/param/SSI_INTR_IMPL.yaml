@@ -17,7 +17,7 @@ description: |
 
   false::
     Supervisor-level software interrupts are not implemented.
-    `mie.SSIE` and `mideleg.SSI` are read-only zero.
+    `mie.SSIE`, `mip.SSIP`, and `mideleg.SSI` are read-only zero.
 long_name: Supervisor-level software interrupts are implemented
 schema:
   type: boolean

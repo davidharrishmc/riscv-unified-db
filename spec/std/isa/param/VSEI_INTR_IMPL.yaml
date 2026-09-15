@@ -17,7 +17,7 @@ description: |
 
   false::
     Virtual supervisor-level external interrupts are not implemented.
-    `mie.VSEIE` and `mideleg.VSEI` are read-only zero.
+    `mie.VSEIE`, `mip.VSEIP`, and `mideleg.VSEI` are read-only zero.
 long_name: Virtual supervisor-level external interrupts are implemented
 schema:
   type: boolean
@@ -25,4 +25,4 @@ definedBy:
   extension:
     allOf:
       - name: Zicsr
-      - name: S
+      - name: H

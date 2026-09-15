@@ -18,7 +18,7 @@ description: |
 
   false::
     Supervisor-level timer interrupts are not implemented.
-    `mie.VSTIE` and and `mdeleg.VSTI` are read-only zero.
+    `mie.VSTIE`, `mip.VSTIP`, and and `mdeleg.VSTI` are read-only zero.
 long_name: Virtual supervisor-level timer interrupts are implemented.
 schema:
   type: boolean
@@ -30,4 +30,4 @@ definedBy:
   extension:
     allOf:
       - name: Zicsr
-      - name: S
+      - name: H

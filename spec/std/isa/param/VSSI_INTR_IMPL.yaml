@@ -17,7 +17,7 @@ description: |
 
   false::
     Supervisor-level software interrupts are not implemented.
-    `mie.VSSIE` and `mideleg.VSSI` are read-only zero.
+    `mie.VSSIE`, `mip.VSSIP`, and `mideleg.VSSI` are read-only zero.
 long_name: Virtual supervisor-level software interrupts are implemented
 schema:
   type: boolean
@@ -25,4 +25,4 @@ definedBy:
   extension:
     allOf:
       - name: Zicsr
-      - name: S
+      - name: H
