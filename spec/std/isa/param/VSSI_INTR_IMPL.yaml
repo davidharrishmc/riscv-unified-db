@@ -16,7 +16,7 @@ description: |
     `mie.VSSIE` and `mideleg.VSSI` are writable.
 
   false::
-    Supervisor-level software interrupts are not implemented.
+    Virtual supervisor-level software interrupts are not implemented.
     `mie.VSSIE`, `mip.VSSIP`, and `mideleg.VSSI` are read-only zero.
 long_name: Virtual supervisor-level software interrupts are implemented
 schema:

@@ -388,7 +388,7 @@ fields:
       MEIP is controlled by the external interrupt controller <% if ext?(:Smaia) %>(AIA) <% end %>.
       It is not writable by software.
     type(): |
-      return SEI_INTR_IMPL ? CsrFieldType::ROH : CsrFieldType::RO;
+      return MEI_INTR_IMPL ? CsrFieldType::ROH : CsrFieldType::RO;
     reset_value: 0
   SGEIP:
     location: 12

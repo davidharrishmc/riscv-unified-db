@@ -17,7 +17,7 @@ description: |
     `mie.VSTIE` and `mdeleg.VSTI` are writable.
 
   false::
-    Supervisor-level timer interrupts are not implemented.
+    Virtual supervisor-level timer interrupts are not implemented.
     `mie.VSTIE`, `mip.VSTIP`, and and `mdeleg.VSTI` are read-only zero.
 long_name: Virtual supervisor-level timer interrupts are implemented.
 schema:
@@ -25,7 +25,7 @@ schema:
 requirements:
   idl(): |
     implemented?(ExtensionName::Sstc) -> VSTI_INTR_IMPL;
-  reason: "When the Sstc extension is implemented, VSTIP reflects the timer interrupt signal resulting from `stimecmp`."
+  reason: "When the Sstc extension is implemented, VSTIP reflects the timer interrupt signal resulting from `vstimecmp`."
 definedBy:
   extension:
     allOf:

@@ -112,8 +112,7 @@ fields:
       When 1, Virtual Supervisor Software interrupts are delegated to HS-mode.
 
       Virtual Supervisor Software Interrupts are always delegated to HS-mode, so this field is read-only one.
-    type(): |
-      return VSSI_INTR_IMPL ? CsrFieldType::RW : CsrFieldType::RO;
+    type: RO
     reset_value: 1
     definedBy:
       extension:
